@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab - 5 - 1 Aron </title>
+
+    <style>
+
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        color: #e6e6ec; 
+        background-color: #262528;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <br>
+        <h1> Select a UE </h1> <br>
+        <hr width="60%"> <br>
+        <input type="radio" name="ue" value="internet and web programming" onclick="ShowUE()">Internet and Web Programming <br>
+        <input type="radio" name="ue" value="ml essentials" onclick="ShowUE()">ML Essentials    <br>
+        <input type="radio" name="ue" value="ai foundations" onclick="ShowUE()">AI Foundations <br>
+
+        <hr width="80%"><h2 id="result"> </h2>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+    function ShowUE() 
+    {
+        var a = document.getElementsByName("ue");
+        for(i = 0; i < a.length; i++) 
+        {
+            if(a[i].checked)
+            {
+                document.getElementById("result").innerHTML = "Course Selected: "+a[i].value.toUpperCase();
+            }
+                
+        }
+    }
+</script>

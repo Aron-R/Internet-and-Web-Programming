@@ -1,0 +1,66 @@
+<!-- Create 3 options to display the course codes of winter 21-22. When the  student clicks the options the corresponding course slot names to be displayed. 
+Provide the facility for the student to select more than one course option for this scenario.  -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aron 20BAI1195</title>
+
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        color: #e6e6ec; 
+        background-color: #262528;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <br>
+        <h1> Course Selection</h1>
+        <hr width="70%">
+        <h3>Select your courses and their slots</h3> <br>
+        <form>
+            <input class="options" type="checkbox" name="iwp" value="iwp" onclick="ShowSlots()">Internet and Web Programming (CSE3004) <br> <span id="iwp" style="display: none;"> <b>Slots:  <br></b> <input type="radio" name="slots1" id="F1" value="F1" onclick="choose('Internet and Web Programming','F1')">F1 <br>
+                <input type="radio" name="slots1" id="F2" value="F2" onclick="choose('Internet and Web Programming','F2')">F2 <br></span> <br>
+            
+            <input class="options" type="checkbox" name="daa" value="daa" onclick="ShowSlots()">Design and Analysis of Algorithms (CSE2012)<br> <span id="daa" style="display: none;"> <b>Slots:  <br></b> <input type="radio" name="slots2" id="C1" value="C1" onclick="choose('Design and Analysis of Algorithms','C1')">C1 <br>
+                <input type="radio" name="slots2" id="C2" value="C2" onclick="choose('Design and Analysis of Algorithms','C2')">C2 <br></span> <br>
+    
+            <input class="options" type="checkbox" name="daa" value="ala" onclick="ShowSlots()">Applied Linear Algebra(MAT3004)<br> <span id="ala" style="display: none;"> <b>Slots:  <br></b> <input type="radio" name="slots3" id="D1" value="D1" onclick="choose('Applied Linear Algebra','D1')">D1 <br>
+                <input type="radio" name="slots3" id="D2" value="D2" onclick="choose('Applied Linear Algebra','D2')">D2 <br></span> <br>
+        </form>
+    </center>
+    
+</body>
+</html>
+
+<script>
+    function ShowSlots()
+    {
+        var a = document.getElementsByClassName("options");
+        for(var i=0;i<a.length;i++)
+        {
+            if(a[i].checked)
+            {
+                var b = document.getElementById(a[i].value)
+                b.style.display = "block";
+            }
+            else
+            {
+                var b = document.getElementById(a[i].value)
+                b.style.display = "none";
+            }
+        }
+    }
+
+    function choose(course, slot)
+    {
+        alert("Course: "+course+"\nSlots chosen: "+slot)
+    }
+    
+</script>

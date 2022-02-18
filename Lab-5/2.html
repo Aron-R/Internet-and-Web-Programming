@@ -1,0 +1,54 @@
+<!-- Provide the 3 color options and let the user select one color 
+    and display the text of the div tag with the chosen color -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab - 5 - 2</title>
+    <style>
+
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        color: #e6e6ec; 
+        background-color: #262528;
+        }
+
+    </style>
+</head>
+<body>
+    <br>
+    <center>
+        <h1>Select a colour </h1> <br>
+        <hr width="50%">
+        <input type="radio" name="color" id="red" value="#ffadad" onclick="ShowColor()">Red <br>
+        <input type="radio" name="color" id="green" value="#caffbf" onclick="ShowColor()">Green    <br>
+        <input type="radio" name="color" id="blue" value="#9bf6ff" onclick="ShowColor()">Blue <br> <br>
+    
+        <hr width="80%"> 
+        <br>
+        <h2 id="result" style="display:none"> Be as you wish to seem.  </h2>
+
+        </center>
+</body>
+</html>
+
+<script type="text/javascript">
+        function ShowColor() 
+        {
+            var a = document.getElementsByName("color");
+            var b = document.getElementById("result");
+            for(i = 0; i < a.length; i++) 
+            {
+                if(a[i].checked)
+                {
+                    b.style.display =a[i].checked ? "block" : "none";
+                    b.style.color = a[i].value;
+                }
+                
+        }
+    }
+</script>

@@ -1,0 +1,89 @@
+<!-- •Design a webpage to include the video of addition of two numbers tutorial to the kids. 
+ In the same page provide the facility for checking the knowledge gained by the student using form elements.
+•Inclusion of video in your page may be done using either iframe or object tag. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition For Kids</title>
+    <style>
+
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        color: #e6e6ec; 
+        background-color: #262528;
+        }
+
+        .btn {
+        height: 30px;
+        font-size: 14px;
+        padding: 6px 12px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        }
+
+        .defaultTextBox {
+        padding: 6px 12px;
+        height: 30px;
+        position: relative;
+        border: 1px solid #cdcdcd;
+        border-color: rgba(0,0,0,.15);
+        background-color: white;
+        font-size: 14px;
+        text-align: center;
+        }
+    </style>
+</head>
+<script lang="Javascript"> 
+    function compute(x,y,z)
+    {
+        if(parseInt(z)== (x+y))
+            alert("Your Answer is Correct! Congratulations!")
+        else
+            alert("Hmmm... Your Answer seems to be incorrect. Try again.")
+    }
+    </script>
+<body bgcolor="black">
+    
+    <center>
+        <br>
+    <h1>Addition For Kids</h1>
+    <hr width="50%"> <br>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/k9IMztXsCAs" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe> <br> <br>
+
+    <hr width="90%">
+    
+    <h2> Lets Test your knowledge </h2>
+    <form name="f1">
+    <h3> Answer the following below: </h3>
+   
+    <h4> 1. What is 1 + 1? </h4>
+    <input type="button" class="btn" value="Check Answer" onclick="compute(1,1,document.f1.t1.value)">
+    <input type="text" class="defaultTextBox" name="t1">
+    <h4> 2. What is 1 + 3? </h4> 
+    <input type="button" class="btn" value="Check Answer" onclick="compute(1,3,document.f1.t2.value)">
+    <input type="text" class="defaultTextBox" name="t2">
+    <h4> 3. What is 5 + 5? </h4> 
+    <input type="button" class="btn" value="Check Answer" onclick="compute(5,5,document.f1.t3.value)">
+    <input type="text" class="defaultTextBox" name="t3">
+    <h4> 4. What is 8 + 9? </h4>
+    <input type="button" class="btn" value="Check Answer" onclick="compute(8,9,document.f1.t4.value)">
+    <input type="text" class="defaultTextBox" name="t4"> <br> <br>
+    <hr width="70%"> <br>
+    
+    </form>
+    </center>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS background-color Property Animation</title>
+<style>
+.animated {
+width: 300px;
+padding: 60px 0;
+font: bold 46px sans-serif;
+text-align: center;
+background-color: yellowgreen;
+-webkit-animation: test 4s infinite; /* Chrome, Safari, Opera */
+animation: test 4s infinite;
+}
+<!--/* Chrome, Safari, Opera */
+@-webkit-keyframes test {
+50% {background-color: orangered;}
+}-->
+/* Standard syntax */
+@keyframes test {
+50% {background-color: orangered;}
+}
+</style>
+</head>
+<body>
+<p><strong>Warning:</strong> CSS Animations do not work in Internet Explorer 9 and earlier versions.</p>
+<p><strong>Note:</strong> The background-color of the following DIV element is animating from its initial value "yellowgreen" to "orangered", and back to the initial value "yellowgreen" again up to infinite times.<p>
+<div class="animated">Box</div>
+</body>
+</html>

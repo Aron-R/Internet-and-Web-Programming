@@ -1,0 +1,59 @@
+<!-- The teacher teaches number system to the students. 
+    The number systems are binary, octal and hexa decimal. 
+    Teacher gave home work to the students to do conversion. 
+    So develop a minimal web application to read the number in decimal format 
+    and display in the corresponding number format based on the click event of the user. -->
+<html lang="en">
+    <script lang="Javascript"> 
+    function hex()
+    {
+        // alert("Hexadecimal: "+document.f1.t1.value.toString(16).toUpperCase())
+        var x = parseInt(document.f1.t1.value,10);
+        alert("Hexadecimal Equivalent: "+x.toString(16).toUpperCase())
+    }
+    function oct()
+    {
+        var x = parseInt(document.f1.t1.value,10);
+        alert("Octal Equivalent: "+x.toString(8).toUpperCase())
+    }
+    function bin()
+    {
+        var x = parseInt(document.f1.t1.value,10);
+        alert("Binary Equivalent: "+x.toString(2))
+    }
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number systems</title>
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        color: #e6e6ec; 
+        background-color: #262528;
+        }
+    </style>
+</head>
+<body>
+    
+    <center>
+        <br>
+        <h1> Number systems </h1>
+        <hr width="70%"> <br>
+        <h2> Enter Decimal Number To Convert</h2> <br>
+        <form name="f1">
+            <input type="text" name="t1"> <br>
+            <input type="button" value="Hexadecimal" onclick="hex()">
+            <input type="button" value="Binary" onclick="bin()">
+            <input type="button" value="Octal" onclick="oct()"> <br>
+        </form>
+
+    </center>
+    
+</body>
+</html>
+
